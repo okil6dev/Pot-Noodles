@@ -1,0 +1,9 @@
+{
+  "parent": "pot_noodles:custom/whitenoodlepot",
+  "textures": {
+    "all": "minecraft:block/white_concrete",
+    "particle": "minecraft:block/white_concrete",
+    "2": "minecraft:block/white_concrete"
+  },
+  "render_type": "solid"
+}

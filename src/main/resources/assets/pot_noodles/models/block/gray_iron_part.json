@@ -1,0 +1,9 @@
+{
+  "parent": "pot_noodles:custom/smallgrayironpart",
+  "textures": {
+    "all": "pot_noodles:block/gray_iron_block",
+    "particle": "pot_noodles:block/gray_iron_block",
+    "0": "pot_noodles:block/gray_iron_block"
+  },
+  "render_type": "solid"
+}

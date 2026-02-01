@@ -1,0 +1,7 @@
+{
+  "parent": "pot_noodles:custom/noodles_item",
+  "textures": {
+    "0": "pot_noodles:block/noodles",
+    "particle": "pot_noodles:item/noodles"
+  }
+}

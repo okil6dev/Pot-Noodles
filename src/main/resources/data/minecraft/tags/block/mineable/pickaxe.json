@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "pot_noodles:gray_iron_part",
+    "pot_noodles:noodle_cooker",
+    "pot_noodles:gray_iron_block",
+    "pot_noodles:white_noodle_bowl"
+  ]
+}

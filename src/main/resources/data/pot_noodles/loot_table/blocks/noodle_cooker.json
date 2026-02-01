@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "pot_noodles:blocks/noodle_cooker",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pot_noodles:noodle_cooker"
+        }
+      ]
+    }
+  ]
+}

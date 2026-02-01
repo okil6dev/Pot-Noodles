@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "pot_noodles:gray_iron_block"
+  },
+  "result": {
+    "id": "pot_noodles:gray_iron_part",
+    "count": 1
+  }
+}

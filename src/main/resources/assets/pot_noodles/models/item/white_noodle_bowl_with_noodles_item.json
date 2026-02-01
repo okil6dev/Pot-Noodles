@@ -1,0 +1,8 @@
+{
+  "parent": "pot_noodles:custom/whitenoodlebowlwithnoodles",
+  "textures": {
+    "0": "minecraft:block/white_concrete",
+    "1": "pot_noodles:block/noodles_cooked",
+    "particle": "minecraft:item/white_candle"
+  }
+}

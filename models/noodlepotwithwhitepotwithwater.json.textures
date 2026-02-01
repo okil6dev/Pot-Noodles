@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "0": "gray_iron_block",
+        "1": "minecraft:stripped_spruce_log",
+        "2": "minecraft:white_concrete",
+        "3": "noodle_water"
+      }
+    }
+  }
+}

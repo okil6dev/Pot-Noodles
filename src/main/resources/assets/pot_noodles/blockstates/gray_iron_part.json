@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "pot_noodles:block/gray_iron_part"
+    },
+    "facing=east": {
+      "model": "pot_noodles:block/gray_iron_part",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "pot_noodles:block/gray_iron_part",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "pot_noodles:block/gray_iron_part",
+      "y": 270
+    }
+  }
+}

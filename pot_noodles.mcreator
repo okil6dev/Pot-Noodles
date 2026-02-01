@@ -1,0 +1,488 @@
+{
+  "mod_elements": [
+    {
+      "name": "GrayIronBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_iron_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/item/gray_iron_block.json",
+          "src/main/java/net/mcreator/potnoodles/block/GrayIronBlockBlock.java",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/gray_iron_block.json",
+          "src/main/resources/assets/pot_noodles/blockstates/gray_iron_block.json",
+          "src/main/resources/assets/pot_noodles/models/block/gray_iron_block.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "GrayIronPart",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_iron_part",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/block/gray_iron_part.json",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/gray_iron_part.json",
+          "src/main/resources/assets/pot_noodles/models/item/gray_iron_part.json",
+          "src/main/resources/assets/pot_noodles/blockstates/gray_iron_part.json",
+          "src/main/java/net/mcreator/potnoodles/block/GrayIronPartBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "PotNoodles",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pot_noodles",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Part1toPart2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "part_1to_part_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/Part1toPart2Procedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "NoodlePotPots",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noodle_pot_pots",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/block/noodle_pot_pots_blockstate_2.json",
+          "src/main/resources/assets/pot_noodles/models/block/noodle_pot_pots_blockstate_1.json",
+          "src/main/resources/assets/pot_noodles/models/block/noodle_pot_pots_blockstate_0.json",
+          "src/main/resources/assets/pot_noodles/models/block/noodle_pot_pots_blockstate_3.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "TurnNoodlePotBlockIntoItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turn_noodle_pot_block_into_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/TurnNoodlePotBlockIntoItemProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "WhiteNoodlePot",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_pot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/blockstates/white_noodle_pot.json",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/white_noodle_pot.json",
+          "src/main/resources/assets/pot_noodles/models/block/white_noodle_pot.json",
+          "src/main/java/net/mcreator/potnoodles/block/WhiteNoodlePotBlock.java",
+          "src/main/resources/assets/pot_noodles/models/item/white_noodle_pot.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "NoodlePots",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noodle_pots",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/NoodlePotsProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GrayIronBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_iron_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pot_noodles/recipe/gray_iron_block_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrayIronPartRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_iron_part_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pot_noodles/recipe/gray_iron_part_recipe.json",
+          "src/main/resources/data/pot_noodles/advancement/recipes/gray_iron_part_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "WhiteNoodlePotRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_pot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pot_noodles/advancement/recipes/white_noodle_pot_recipe.json",
+          "src/main/resources/data/pot_noodles/recipe/white_noodle_pot_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "NoodleCooker",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noodle_cooker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/blockstates/noodle_cooker.json",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/noodle_cooker.json",
+          "src/main/resources/assets/pot_noodles/models/item/noodle_cooker.json",
+          "src/main/resources/assets/pot_noodles/models/block/noodle_cooker.json",
+          "src/main/java/net/mcreator/potnoodles/block/NoodleCookerBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "RawNoodles",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_noodles",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/item/RawNoodlesItem.java",
+          "src/main/resources/assets/pot_noodles/models/item/raw_noodles.json"
+        ]
+      },
+      "path": "~/items"
+    },
+    {
+      "name": "NoodleCookerCooker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noodle_cooker_cooker",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/NoodleCookerCookerProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "NoodleCookerTime1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noodle_cooker_time_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/NoodleCookerTime1Procedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "WhiteNoodleBowl",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_bowl",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/item/white_noodle_bowl.json",
+          "src/main/resources/assets/pot_noodles/blockstates/white_noodle_bowl.json",
+          "src/main/resources/assets/pot_noodles/models/block/white_noodle_bowl.json",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/white_noodle_bowl.json",
+          "src/main/java/net/mcreator/potnoodles/block/WhiteNoodleBowlBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhiteNoodleBowlWithNoodles",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_bowl_with_noodles",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/block/white_noodle_bowl_with_noodles.json",
+          "src/main/resources/assets/pot_noodles/blockstates/white_noodle_bowl_with_noodles.json",
+          "src/main/java/net/mcreator/potnoodles/block/WhiteNoodleBowlWithNoodlesBlock.java",
+          "src/main/resources/assets/pot_noodles/models/item/white_noodle_bowl_with_noodles.json",
+          "src/main/resources/data/pot_noodles/loot_table/blocks/white_noodle_bowl_with_noodles.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhiteNoodleBowlWithNoodlesItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_bowl_with_noodles_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/pot_noodles/models/item/white_noodle_bowl_with_noodles_item.json",
+          "src/main/java/net/mcreator/potnoodles/item/WhiteNoodleBowlWithNoodlesItemItem.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhiteNoodleBowlBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_bowl_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/potnoodles/procedures/WhiteNoodleBowlBlockProcedure.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhiteNoodleBowlRecipes",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_noodle_bowl_recipes",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/pot_noodles/advancement/recipes/white_noodle_bowl_recipes.json",
+          "src/main/resources/data/pot_noodles/recipe/white_noodle_bowl_recipes.json"
+        ]
+      },
+      "path": "~/Recipes"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "NoodleCookerTime1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:WhiteNoodleBowl",
+      "~CUSTOM:NoodleCooker",
+      "~CUSTOM:GrayIronPart",
+      "~CUSTOM:GrayIronBlock"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "block.pot_noodles.gray_iron_block": "Gray Iron Block",
+      "block.pot_noodles.gray_iron_part": "Gray Iron Part",
+      "item_group.pot_noodles.pot_noodles": "Pot Noodles",
+      "block.pot_noodles.white_noodle_pot": "White Noodle Pot",
+      "block.pot_noodles.noodle_cooker": "Noodle Cooker",
+      "item.pot_noodles.raw_noodles": "Raw Noodles",
+      "block.pot_noodles.white_noodle_bowl": "White Noodle Bowl",
+      "block.pot_noodles.white_noodle_bowl_with_noodles": "White Noodle Bowl",
+      "item.pot_noodles.white_noodle_bowl_with_noodles_item": "White Noodle Bowl"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/potnoodles/init/PotNoodlesModBlocks.java",
+      "src/main/java/net/mcreator/potnoodles/init/PotNoodlesModItems.java",
+      "src/main/resources/pot_noodles.mixins.json",
+      "src/main/java/net/mcreator/potnoodles/PotNoodlesMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/potnoodles/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/potnoodles/PotNoodlesModPlayerAnimationAPI.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/potnoodles/network/PotNoodlesModVariables.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/potnoodles/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/potnoodles/init/PotNoodlesModTabs.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/LevelRendererMixin.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/potnoodles/mixin/ItemInHandLayerMixin.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "items",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "pot_noodles",
+    "modName": "Pot Noodles",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.mcreator.potnoodles"
+  },
+  "mcreatorVersion": 202500345720
+}

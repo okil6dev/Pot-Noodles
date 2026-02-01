@@ -1,0 +1,61 @@
+{
+  "_fv": 79,
+  "_type": "blockstates",
+  "definition": {
+    "block": "NoodleCooker",
+    "blockstateList": [
+      {
+        "texture": "minecraft:white_concrete",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "noodlepotwithwhitepot:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "minecraft:white_concrete",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "noodlepotwithwhitepotwithwater:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "minecraft:white_concrete",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "noodlepotwithwhitepotwithnoodles:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "minecraft:white_concrete",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "noodlepotwithwhitepotwithnoodlescooked:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

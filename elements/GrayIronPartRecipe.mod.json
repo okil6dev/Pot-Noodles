@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:GrayIronBlock"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:GrayIronBlock"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:GrayIronPart"
+    },
+    "name": "gray_iron_part_recipe",
+    "namespace": "mod"
+  }
+}
