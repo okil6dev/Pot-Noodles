@@ -4,23 +4,32 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.potnoodles.world.inventory.NoodleCookerGuiMenu;
 import net.mcreator.potnoodles.init.PotNoodlesModItems;
 import net.mcreator.potnoodles.init.PotNoodlesModBlocks;
+
+import io.netty.buffer.Unpooled;
 
 public class NoodlePotsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -41,19 +50,26 @@ public class NoodlePotsProcedure {
 					ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1, false);
+					}
+				}
 			}
 		} else {
 			if (0 == StopProcedure) {
-				if (1 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip8
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip8)
+				if (1 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip9
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip9)
 						: -1)) {
 					if (!(PotNoodlesModItems.RAW_NOODLES.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem())) {
 						if (!(Items.WATER_BUCKET == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem())) {
 							if (Blocks.AIR.asItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 								if (entity instanceof LivingEntity _entity) {
-									ItemStack _setstack15 = new ItemStack(PotNoodlesModBlocks.WHITE_NOODLE_POT.get()).copy();
-									_setstack15.setCount(1);
-									_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack15);
+									ItemStack _setstack16 = new ItemStack(PotNoodlesModBlocks.WHITE_NOODLE_POT.get()).copy();
+									_setstack16.setCount(1);
+									_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack16);
 									if (_entity instanceof Player _player)
 										_player.getInventory().setChanged();
 								}
@@ -83,7 +99,7 @@ public class NoodlePotsProcedure {
 					}
 				}
 			}
-			if (1 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip20 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip20) : -1)) {
+			if (1 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip21 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip21) : -1)) {
 				if (0 == StopProcedure) {
 					if (Items.WATER_BUCKET == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 						{
@@ -101,9 +117,9 @@ public class NoodlePotsProcedure {
 							}
 						}
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack25 = new ItemStack(Items.BUCKET).copy();
-							_setstack25.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack25);
+							ItemStack _setstack26 = new ItemStack(Items.BUCKET).copy();
+							_setstack26.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack26);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -116,7 +132,7 @@ public class NoodlePotsProcedure {
 					}
 				}
 			}
-			if (2 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip30 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip30) : -1)) {
+			if (2 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip31 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip31) : -1)) {
 				if (0 == StopProcedure) {
 					if (Items.BUCKET == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 						{
@@ -127,9 +143,9 @@ public class NoodlePotsProcedure {
 								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 						}
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack34 = new ItemStack(Items.WATER_BUCKET).copy();
-							_setstack34.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack34);
+							ItemStack _setstack35 = new ItemStack(Items.WATER_BUCKET).copy();
+							_setstack35.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack35);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -151,8 +167,8 @@ public class NoodlePotsProcedure {
 			}
 			if (0 == StopProcedure) {
 				if (PotNoodlesModItems.RAW_NOODLES.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
-					if (2 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip42
-							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip42)
+					if (2 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip43
+							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip43)
 							: -1)) {
 						{
 							int _value = 3;
@@ -170,14 +186,14 @@ public class NoodlePotsProcedure {
 				}
 			}
 			if (0 == StopProcedure) {
-				if (4 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip47
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip47)
+				if (4 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip48
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip48)
 						: -1)) {
 					if (PotNoodlesModBlocks.WHITE_NOODLE_BOWL.get().asItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack50 = new ItemStack(PotNoodlesModItems.WHITE_NOODLE_BOWL_WITH_NOODLES_ITEM.get()).copy();
-							_setstack50.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack50);
+							ItemStack _setstack51 = new ItemStack(PotNoodlesModItems.WHITE_NOODLE_BOWL_WITH_NOODLES_ITEM.get()).copy();
+							_setstack51.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack51);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -188,10 +204,48 @@ public class NoodlePotsProcedure {
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("ambient.underwater.exit")), SoundSource.NEUTRAL, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("ambient.underwater.exit")), SoundSource.NEUTRAL, 1, 1, false);
+							}
+						}
 					}
+				}
+			}
+			if (3 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip55 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip55) : -1)) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("NoodleCookerGui");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new NoodleCookerGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		}
 		StopProcedure = 0;
+		if (!world.isClientSide()) {
+			BlockPos _bp = BlockPos.containing(x, y, z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null) {
+				_blockEntity.getPersistentData().putString("tagName", "tagValue");
+			}
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
 	}
 }

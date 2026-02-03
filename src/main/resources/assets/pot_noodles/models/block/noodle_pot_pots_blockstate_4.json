@@ -1,0 +1,12 @@
+{
+  "parent": "pot_noodles:custom/noodlepotwithwhitepotwithnoodles",
+  "textures": {
+    "all": "minecraft:block/white_concrete",
+    "particle": "minecraft:block/spruce_planks",
+    "0": "pot_noodles:block/gray_iron_block",
+    "1": "minecraft:block/stripped_spruce_log",
+    "2": "minecraft:block/white_concrete",
+    "4": "pot_noodles:block/noodles"
+  },
+  "render_type": "translucent"
+}

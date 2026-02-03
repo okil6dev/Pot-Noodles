@@ -30,5 +30,49 @@ public class NoodleCookerTime1Procedure {
 			PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 = PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 - 1;
 			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
 		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 200) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "10";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 180) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "9";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 160) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "8";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 140) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "7";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 120) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "6";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 100) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "5";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 80) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "4";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 60) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "3";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 40) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "2";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 20) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "1";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
+		if (PotNoodlesModVariables.MapVariables.get(world).NoodleCookerTime1 == 20) {
+			PotNoodlesModVariables.MapVariables.get(world).Cookleft = "Done";
+			PotNoodlesModVariables.MapVariables.get(world).markSyncDirty();
+		}
 	}
 }

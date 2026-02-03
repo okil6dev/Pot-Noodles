@@ -112,6 +112,7 @@ public class PotNoodlesModVariables {
 		public static final String DATA_NAME = "pot_noodles_mapvars";
 		boolean _syncDirty = false;
 		public double NoodleCookerTime1 = 0;
+		public String Cookleft = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -121,11 +122,13 @@ public class PotNoodlesModVariables {
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			NoodleCookerTime1 = nbt.getDouble("NoodleCookerTime1");
+			Cookleft = nbt.getString("Cookleft");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putDouble("NoodleCookerTime1", NoodleCookerTime1);
+			nbt.putString("Cookleft", Cookleft);
 			return nbt;
 		}
 

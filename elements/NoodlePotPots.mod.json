@@ -55,6 +55,19 @@
         "customModelName": "noodlepotwithwhitepotwithnoodlescooked:default",
         "luminance": 0,
         "boundingBoxes": []
+      },
+      {
+        "texture": "minecraft:white_concrete",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "noodlepotwithwhitepotwithnoodles:default",
+        "luminance": 0,
+        "boundingBoxes": []
       }
     ]
   }

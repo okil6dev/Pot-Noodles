@@ -7,5 +7,6 @@
   "item.pot_noodles.raw_noodles": "Raw Noodles",
   "block.pot_noodles.white_noodle_bowl": "White Noodle Bowl",
   "block.pot_noodles.white_noodle_bowl_with_noodles": "White Noodle Bowl",
-  "item.pot_noodles.white_noodle_bowl_with_noodles_item": "White Noodle Bowl"
+  "item.pot_noodles.white_noodle_bowl_with_noodles_item": "White Noodle Bowl",
+  "gui.pot_noodles.noodle_cooker_gui.label_empty": ""
 }

@@ -20,8 +20,10 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.potnoodles.network.PotNoodlesModVariables;
 import net.mcreator.potnoodles.init.PotNoodlesModTabs;
+import net.mcreator.potnoodles.init.PotNoodlesModMenus;
 import net.mcreator.potnoodles.init.PotNoodlesModItems;
 import net.mcreator.potnoodles.init.PotNoodlesModBlocks;
+import net.mcreator.potnoodles.init.PotNoodlesModBlockEntities;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -41,9 +43,11 @@ public class PotNoodlesMod {
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 		PotNoodlesModBlocks.REGISTRY.register(modEventBus);
+		PotNoodlesModBlockEntities.REGISTRY.register(modEventBus);
 		PotNoodlesModItems.REGISTRY.register(modEventBus);
 		PotNoodlesModTabs.REGISTRY.register(modEventBus);
 		PotNoodlesModVariables.ATTACHMENT_TYPES.register(modEventBus);
+		PotNoodlesModMenus.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

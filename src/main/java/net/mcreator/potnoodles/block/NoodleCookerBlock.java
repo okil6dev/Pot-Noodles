@@ -30,7 +30,7 @@ import net.mcreator.potnoodles.procedures.NoodlePotsProcedure;
 import net.mcreator.potnoodles.procedures.NoodleCookerCookerProcedure;
 
 public class NoodleCookerBlock extends Block {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 4);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 5);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	private static final VoxelShape SHAPE_NORTH = Shapes.or(box(5, 0, 7, 11, 1, 11), box(6, 0, 1, 10, 1, 7));
 	private static final VoxelShape SHAPE_SOUTH = Shapes.or(box(5, 0, 5, 11, 1, 9), box(6, 0, 9, 10, 1, 15));
@@ -47,6 +47,8 @@ public class NoodleCookerBlock extends Block {
 				if (s.getValue(BLOCKSTATE) == 3)
 					return 0;
 				if (s.getValue(BLOCKSTATE) == 4)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 5)
 					return 0;
 				return 0;
 			}
